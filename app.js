@@ -4,10 +4,6 @@ const port = process.env.PORT ?? 8080;
 
 app.use(express.static('public'))
 
-app.get('*', (req, res) => {
-    res.redirect('/');
-})
-
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
 })
